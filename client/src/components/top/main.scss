@@ -1,0 +1,35 @@
+#main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, rgb(14, 198, 164), rgb(159, 27, 188));
+  position: absolute;
+  top: 0;
+
+  .main-visual {
+    height: 80vh;
+    width: 90%;
+    margin: 100px auto;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+  }
+
+  #switch {
+    position: absolute;
+    right: 40px;
+    top: 300px;
+
+    .circle-btn {
+      width: 20px;
+      height: 20px;
+      margin-top: 25px;
+      background-color: white;
+      border-radius: 20px;
+      opacity: 0.8;
+      &:hover {
+        background-color: aqua;
+        cursor: pointer;
+      }
+    }
+  }
+}

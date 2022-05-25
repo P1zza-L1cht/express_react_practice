@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './Header';
-import Main from './Main';
+import Main from './top/Main';
+import Game from './games/Game';
 import Footer from './Footer';
+import './app.scss';
 
 
 class App extends React.Component{
@@ -10,6 +12,7 @@ class App extends React.Component{
       <div>
         <Header />
         <Main />
+        <Game />
         <Footer />
       </div>
     );
