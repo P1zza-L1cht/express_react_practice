@@ -9,17 +9,17 @@ import Contact from './partTop/Contact';
 class Main extends React.Component {
   constructor() {
     super();
-    this.contentNum = 1;
+    this.state = {contentNum: 1};
   }
 
-  changeContent(event) {
-    this.contentNum = event.target.value;
+  setContentNum = (n) =>  {
+    this.setState({contentNum: n});
   }
 
   render() {
     let content;
     // eslint-disable-next-line default-case
-    switch(this.contentNum) {
+    switch(this.state.contentNum) {
       case 1:
         content = <MainVisual />;
         break;
@@ -38,15 +38,14 @@ class Main extends React.Component {
     }
     return (
       <div id="main">
-        {this.contentNum}
         {content}
         <div id='switch'>
           <ul>
-            <li><div className='circle-btn' value='1' onChange={(event) => {this.changeContent(event)}}></div></li>
-            <li><div className='circle-btn' value='2' onChange={(event) => {this.changeContent(event)}}></div></li>
-            <li><div className='circle-btn' value='3' onChange={(event) => {this.changeContent(event)}}></div></li>
-            <li><div className='circle-btn' value='4' onChange={(event) => {this.changeContent(event)}}></div></li>
-            <li><div className='circle-btn' value='5' onChange={(event) => {this.changeContent(event)}}></div></li>
+            <li><div className='circle-btn' onClick={() => {this.setContentNum(1)}}></div></li>
+            <li><div className='circle-btn' onClick={() => {this.setContentNum(2)}}></div></li>
+            <li><div className='circle-btn' onClick={() => {this.setContentNum(3)}}></div></li>
+            <li><div className='circle-btn' onClick={() => {this.setContentNum(4)}}></div></li>
+            <li><div className='circle-btn' onClick={() => {this.setContentNum(5)}}></div></li>
           </ul>
         </div>
       </div>
